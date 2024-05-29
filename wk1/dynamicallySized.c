@@ -3,11 +3,11 @@
 
 int main(void) {
     int arrayLen = 0;
-    scanf("%d", &arrayLen); // try 1000000000 (a billion)
+    scanf("%d", &arrayLen);  // try 1000000000 (a billion)
 
     // ! this line would produce a compiler warning (with the -Wvla flag)
     // ! because we do not know the size of the array at compile-time
-    char arr[arrayLen]; // 1GB array
+    char arr[arrayLen];  // 1GB array
 
     printf("Successfully created an array of length %d\n", arrayLen);
     printf("Array address: %p\n", arr);

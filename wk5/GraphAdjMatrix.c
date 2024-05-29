@@ -2,7 +2,7 @@
 
 struct graph {
     int nV;
-    int nE; // optional
+    int nE;  // optional
     bool **adjMatrix;
 };
 

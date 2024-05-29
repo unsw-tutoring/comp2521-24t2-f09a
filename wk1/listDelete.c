@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 struct node {
-	int value;
-	struct node *next;
+    int value;
+    struct node *next;
 };
 
 struct node *listNew(void) {
@@ -20,7 +20,8 @@ struct node *listInsert(struct node *list, int value) {
 // delete the first instance of node with 'value' from the linked list
 // returns the head of the linked list after this is complete
 struct node *listDelete(struct node *list, int value) {
-	return NULL;
+    // TODO
+    return NULL;
 }
 
 int listLength(struct node *list) {
@@ -39,13 +40,13 @@ int main(void) {
     list = listInsert(list, 3);
     list = listInsert(list, 4);
     list = listInsert(list, 5);
-    
+
     list = listDelete(list, 3);
-    
+
     // print list
     for (struct node *curr = list; curr != NULL; curr = curr->next) {
         printf("%d\n", curr->value);
     }
-    
+
     return 0;
 }

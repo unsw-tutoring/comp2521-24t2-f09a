@@ -1,6 +1,6 @@
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 
 #include "Graph.h"
 #include "Queue.h"
@@ -9,6 +9,6 @@
 // distance between src and each vertex.
 // For an undirected, unweighted graph.
 int *findShortestDistance(Graph g, int src) {
-   // TODO
-   return 0;
+    // TODO
+    return 0;
 }

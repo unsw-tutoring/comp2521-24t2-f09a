@@ -13,7 +13,7 @@ int main(void) {
     int *num = malloc(sizeof(int));
     printf("default value of (int):   0x%x\n", *num);
     int **num2 = malloc(sizeof(int *));
-    printf("default value of (int *): %p\n",   *num2);
+    printf("default value of (int *): %p\n", *num2);
 
     printf("\n");
 
@@ -22,10 +22,11 @@ int main(void) {
     struct student s;
     printf("memory addreses of struct student s\n");
     printf("sizeof(struct student) = %lu\n", sizeof(struct student));
-    printf("&s      = %p, offset = %ld\n", &s,      (void *)&s      - (void *)&s);
-    printf("&s.id   = %p, offset = %ld\n", &s.id,   (void *)&s.id   - (void *)&s);
-    printf("&s.name = %p, offset = %ld\n", &s.name, (void *)&s.name - (void *)&s);
-    printf("&s.wam  = %p, offset = %ld\n", &s.wam,  (void *)&s.wam  - (void *)&s);
+    printf("&s      = %p, offset = %ld\n", &s, (void *)&s - (void *)&s);
+    printf("&s.id   = %p, offset = %ld\n", &s.id, (void *)&s.id - (void *)&s);
+    printf("&s.name = %p, offset = %ld\n", &s.name,
+           (void *)&s.name - (void *)&s);
+    printf("&s.wam  = %p, offset = %ld\n", &s.wam, (void *)&s.wam - (void *)&s);
 
     // TODO: malloc a struct student and give them an id, name, and wam
     // hint: use strcpy

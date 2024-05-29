@@ -8,7 +8,7 @@
 // determine whether the array contains two integers that sum to sum
 // aim for O(n) average/expected time complexity
 bool twoSum(int arr[], int size, int sum) {
-	// TODO
+    // TODO
     return false;
 }
 
@@ -16,6 +16,6 @@ bool twoSum(int arr[], int size, int sum) {
 // determine whether the array contains three integers that sum to S.
 // aim for O(n^2) average/expected time complexity
 bool threeSum(int arr[], int size, int sum) {
-	// TODO
+    // TODO
     return false;
 }

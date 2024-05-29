@@ -1,16 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Time Complexity: 
+// Time Complexity:
 int f1(int n) {
-    int sum = 0; 
+    int sum = 0;
     for (int i = 0; i < n; i++) {
         sum += i % 3;
     }
     return sum;
 }
 
-// Time Complexity: 
+// Time Complexity:
 int f2(int n) {
     if (n <= 0) {
         return 0;
@@ -18,7 +18,7 @@ int f2(int n) {
     return n + f2(n / 3);
 }
 
-// Time Complexity: 
+// Time Complexity:
 int f3(int n) {
     int count = 0;
     int sum = 0;

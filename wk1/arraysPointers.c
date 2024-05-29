@@ -8,10 +8,10 @@ int main(void) {
     printf("&a[0] = %p\n", &a[0]);
     printf("&a[1] = %p\n", &a[1]);
     printf("&a[4] = %p\n", &a[4]);
-    printf("&4[a] = %p\n", &4[a]);
+    printf("&4[a] = %p\n", &4 [a]);
 
     printf("\n");
-    
+
     char b[5];
     printf("memory addresses of char array b\n");
     printf(" b    = %p\n", b);

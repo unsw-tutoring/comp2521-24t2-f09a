@@ -3,9 +3,9 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 
-#include <stdio.h>
 #include <stdbool.h>
 #include <stddef.h>
+#include <stdio.h>
 
 typedef struct queue *Queue;
 
@@ -34,5 +34,3 @@ bool QueueIsEmpty(Queue q);
 void QueueDump(Queue q, FILE *fp);
 
 #endif
-
-

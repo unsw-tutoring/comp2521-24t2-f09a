@@ -17,9 +17,9 @@ Write the function friendliestPerson(Graph g, int p), which takes an undirected 
 representing a social network and returns the friendliness of the user p.
 */
 
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 
 #include "Graph.h"
 
