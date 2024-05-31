@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
 int main(void) {
     int arrayLen = 0;
     scanf("%d", &arrayLen);  // try 1000000000 (a billion)
@@ -14,19 +15,20 @@ int main(void) {
 
     return 0;
 }
+*/
 
-/*
 int main(void) {
     unsigned long long arrayLen = 0;
-    scanf("%llu", &arrayLen); // try 1000000000000000 (a quadrillion)
+    scanf("%llu", &arrayLen);  // try 1000000000000000 (a quadrillion)
 
-    char *arr = malloc(arrayLen * sizeof(char)); // 1PB array
-    
-    // TODO: check if malloc was successful
+    char *arr = malloc(arrayLen * sizeof(char));  // 1PB array
+    if (arr == NULL) {
+        fprintf(stderr, "Failed to allocate memory\n");
+        exit(EXIT_FAILURE);
+    }
 
     printf("Successfully created an array of length %llu\n", arrayLen);
     printf("Array address: %p\n", arr);
 
     return 0;
 }
-*/

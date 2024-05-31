@@ -28,12 +28,21 @@ int main(void) {
            (void *)&s.name - (void *)&s);
     printf("&s.wam  = %p, offset = %ld\n", &s.wam, (void *)&s.wam - (void *)&s);
 
-    // TODO: malloc a struct student and give them an id, name, and wam
-    // hint: use strcpy
+    // malloc a struct student and give them an id, name, and wam
+    struct student *s1 = malloc(sizeof(struct student));
+    s1->id = 1;
+    strcpy(s1->name, "Lucy");
+    s1->wam = 59.4;
 
-    // TODO: malloc an array of 10 struct students
+    // malloc an array of 10 struct students
+    struct student *s2 = malloc(10 * sizeof(struct student));
 
-    // TODO: malloc an array of 5 pointers to struct students
+    // malloc an array of 5 pointers to struct students
+    struct student **s3 = malloc(5 * sizeof(struct student *));
 
-    // TODO: malloc a 2D array of struct students with 5 'rows' and 10 'columns'
+    // malloc a 2D array of struct students with 5 'rows' and 10 'columns'
+    struct student **s4 = malloc(5 * sizeof(struct student *));
+    for (int i = 0; i < 5; i++) {
+        s4[i] = calloc(10, sizeof(struct student));
+    }
 }
