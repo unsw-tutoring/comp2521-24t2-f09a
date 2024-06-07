@@ -34,8 +34,14 @@ List ListAdd(List l, int val) {
 // if 'val' is not in the list, do nothing
 // returns the head of the new linked list
 struct node *ListDelete(struct node *l, int val) {
-    // TODO
-    return NULL;
+    if (l == NULL) return NULL;
+    if (l->data == val) {
+        struct node *newHead = l->next;
+        free(l);
+        return newHead;
+    }
+    l->next = ListDelete(l->next, val);
+    return l;
 }
 
 // delete all odd numbers from list -- recursively
@@ -52,30 +58,36 @@ struct node *ListDeleteSecond(struct node *l) {
 
 // prints out the linked list
 void ListPrint(struct node *l) {
-    // TODO
+    if (l == NULL) return;
+    printf("%d\n", l->data);
+    ListPrint(l->next);
 }
 
 // prints out the linked list in reverse
 void ListPrintReverse(struct node *l) {
-    // TODO
+    if (l == NULL) return;
+    ListPrintReverse(l->next);
+    printf("%d\n", l->data);
 }
 
 // returns length of linked list
 int ListLength(struct node *l) {
-    // TODO
-    return 0;
+    if (l == NULL) return 0;
+    return 1 + ListLength(l->next);
 }
 
 // returns number of odd nodes in linked list
 int ListCountOdd(struct node *l) {
-    // TODO
-    return 0;
+    if (l == NULL) return 0;
+    if (l->data % 2 == 1) return 1 + ListCountOdd(l->next);
+    else return ListCountOdd(l->next);
 }
 
 // check if list is sorted in non-descending order
 bool ListIsSorted(struct node *l) {
-    // TODO
-    return false;
+    if (l == NULL) return true;
+    if (l->next == NULL) return true;
+    return (l->data <= l->next->data) && ListIsSorted(l->next);
 }
 
 // ! THE FOLLOWING TWO EXAMPLES SHOW TWO COMMON TRICKS / TECHNIQUES YOU CAN
