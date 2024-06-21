@@ -1,6 +1,6 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 #include "Stack.h"
 
@@ -26,7 +26,6 @@ void StackPush(Stack s, int item) {
         s->items = realloc(s->items, s->capacity * sizeof(int));
     }
     s->items[s->size++] = item;
-
 }
 
 // Pops an item from the stack and returns it
