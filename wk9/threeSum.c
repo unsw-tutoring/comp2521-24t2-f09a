@@ -8,7 +8,18 @@
 // determine whether the array contains two integers that sum to sum
 // aim for O(n) average/expected time complexity
 bool twoSum(int arr[], int size, int sum) {
-    // TODO
+    HashTable ht = HashTableNew();
+
+    for (int i = 0; i < size; i++) {  // n times
+        int other = sum - arr[i];
+        if (HashTableContains(ht, other)) {
+            HashTableFree(ht);
+            return true;
+        }
+
+        HashTableInsert(ht, arr[i], -1);
+    }
+    HashTableFree(ht);
     return false;
 }
 
